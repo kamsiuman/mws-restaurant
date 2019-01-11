@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="icon" href="./img/favicon.ico" type="image/ico" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant Reviews</title>
+    <link rel="shortcut icon" href="img/restaurant.ico">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <title>Restaurant Reviews</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
-    </nav>
+  <header class="restaurant-title">
+    <h1>
+      <a tabindex="1" href="/restaurant_reviews_project/" aria-label="Home">Restaurant Reviews</a>
+    </h1>
   </header>
 
   <main id="maincontent">
@@ -22,21 +26,22 @@
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-            <label for="neighborhoods-select">Neighborhood
-                <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-                    <option value="all">All Neighborhoods</option>
-                </select>
-            </label>
-            <label for="cuisines-select">Cuisine Type
-                <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-                    <option value="all">All Cuisines</option>
-                </select>
-            </label>
+        <label for="neighborhoods-select">Neighborhood
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+        </label>
+        <label for="cuisines-select">Cuisine Type
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </label>
       </div>
       <ul id="restaurants-list"></ul>
     </section>
   </main>
 
+  <script src="js/map.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4MihoAkj2oY-qQjs4jEOpz7hoErqPE0&libraries=places&callback=initMap"></script>
