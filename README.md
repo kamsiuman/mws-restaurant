@@ -36,6 +36,17 @@ reference : https://www.youtube.com/watch?v=lE6Y6M9xPLw
 
 reference : https://www.youtube.com/watch?v=tyVQW2PkFk4
 
+[2019.01.08]
+
+1. researching the respondsive style (look at the moble-first) and playing with the chrome debugger.. the css...
+
+note :
+-- the reason why the resturant tile is fix width is because the width is fix "Restaurant Listing" which the width is set to "270px;"
+-- restaurants-list => flex-wrap: wrap; (important)
+-- decide the split into 2 css files.. one for index and one for resturant. the reasons is I cannot find a better way to use the @media query to control different elements from diff files..also looks unorganize.
+
+reference : https://www.youtube.com/watch?v=tyVQW2PkFk4
+
 ## TODO
 
 1. would like to add more oprtion feature when the time is permitted
