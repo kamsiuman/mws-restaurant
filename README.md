@@ -65,12 +65,6 @@ note :
 1. fix the respondsive on the resturant page
 1. fix the @media query by adding the meta tag in the html
 
-## TODO
-
-1. would like to add more oprtion feature when the time is permitted
-2. fix the naming convention.
-3. more to come!
-
 [2019.01.12] - service-workers
 
 2. watching video : Intro To Service Workers & Caching
@@ -81,6 +75,8 @@ reference : https://www.youtube.com/watch?v=ksXwaWHCW6k
 [2019.01.13] - service-workers
 
 1.Testing in local and it seems ok
+
+2. Final testing and funcational review according to the detailed project requirements according to the Restaurant Reviews project rubric
 
 reference : https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
 reference : https://www.youtube.com/watch?v=ksXwaWHCW6k
