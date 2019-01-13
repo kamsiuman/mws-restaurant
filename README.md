@@ -14,7 +14,7 @@
 ## Instructions
 
 1. git clone repo-> https://github.com/kamsiuman/mws-restaurant-stage-1-google-maps.git
-2. In a terminal, spin up the server with `python -m SimpleHTTPServer 8000`
+2. In a terminal, spin up the server with `python -m SimpleHTTPServer 8000` or `python -m http.server 8001`
 3. browser the index.html
 
 ## Development Journal/Thought
@@ -46,6 +46,21 @@ note :
 -- decide the split into 2 css files.. one for index and one for resturant. the reasons is I cannot find a better way to use the @media query to control different elements from diff files..also looks unorganize.
 
 reference : https://www.youtube.com/watch?v=tyVQW2PkFk4
+
+[2019.01.09] - accessability
+
+1. impleement the tab with tab-index
+2. add the image-alt tag in the creatResturantHTML
+
+note :
+-- the reason why the resturant tile is fix width is because the width is fix "Restaurant Listing" which the width is set to "270px;"
+-- restaurants-list => flex-wrap: wrap; (important)
+-- decide the split into 2 css files.. one for index and one for resturant. the reasons is I cannot find a better way to use the @media query to control different elements from diff files..also looks unorganize.
+
+[2019.01.11]
+
+1. fix the respondsive on the resturant page
+1. fix the @media query by adding the meta tag in the html
 
 ## TODO
 

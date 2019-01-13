@@ -437,6 +437,10 @@ section #map-container {
     flex-basis: 100%;
   }
 
+  #reviews-container h2 {
+    color: aquamarine;
+  }
+
   #restaurant-container h2 {
     font-size: 4rem;
   }
