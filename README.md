@@ -49,7 +49,7 @@ reference : https://www.youtube.com/watch?v=tyVQW2PkFk4
 
 [2019.01.09] - accessability
 
-1. impleement the tab with tab-index
+1. impleement the tab with tab-index (index, the resturant cab with tabindex 3)
 2. add the image-alt tag in the creatResturantHTML
 
 note :
@@ -60,6 +60,17 @@ note :
 [2019.01.11]
 
 1. fix the respondsive on the resturant page
+1. fix the @media query by adding the meta tag in the html
+
+## TODO
+
+1. would like to add more oprtion feature when the time is permitted
+2. fix the naming convention.
+3. more to come!
+
+[2019.01.12] - accessability
+
+1. add aria-label="select cuisine" to the selection-filter in the index.html
 1. fix the @media query by adding the meta tag in the html
 
 ## TODO

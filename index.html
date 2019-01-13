@@ -27,12 +27,12 @@
       <div class="filter-options">
         <h2>Filter Results</h2>
         <label for="neighborhoods-select">Neighborhood
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <select tabindex="2"  aria-label="select neighborhood" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
           </select>
         </label>
         <label for="cuisines-select">Cuisine Type
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <select tabindex="2"  aria-label="select cuisine" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
             <option value="all">All Cuisines</option>
           </select>
         </label>

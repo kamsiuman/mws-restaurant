@@ -222,6 +222,19 @@ section #map-container {
   padding: 0 10px;
 }
 
+#restaurants-list li a {
+  color: #f18200;
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
