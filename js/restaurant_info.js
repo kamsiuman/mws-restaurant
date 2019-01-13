@@ -83,7 +83,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     row.appendChild(day);
 
     const time = document.createElement('td');
-    time.innerHTML = operatingHours[key];
+    time.innerHTML = operatingHours[key].replace(/, */g, ',<br/>');
     row.appendChild(time);
 
     hours.appendChild(row);
@@ -122,22 +122,22 @@ createReviewHTML = (review) => {
   li.appendChild(reviewHeader);
   const name = document.createElement('h3');
   name.innerHTML = review.name;
-  name.tabIndex="5";
+  // name.tabIndex="5";
   reviewHeader.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
-  date.tabIndex = "5";
+  // date.tabIndex = "5";
   reviewHeader.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
-  rating.tabIndex = "5";
+  // rating.tabIndex = "5";
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
-  comments.tabIndex = "5";
+  // comments.tabIndex = "5";
   li.appendChild(comments);
 
   return li;
@@ -146,11 +146,11 @@ createReviewHTML = (review) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
-  const li = document.createElement('li');
-  li.innerHTML = restaurant.name;
-  breadcrumb.appendChild(li);
+  const breadcrumbLink = document.createElement('a');
+  breadcrumbLink.innerHTML = restaurant.name;
+  breadcrumb.appendChild(breadcrumbLink);
 }
 
 /**
