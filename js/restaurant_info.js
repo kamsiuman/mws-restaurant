@@ -6,15 +6,13 @@ var map;
  */
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
+    console.log('Service Worker : Registered');
     navigator.serviceWorker
-      .register("/serviceWorker.js")
+      .register("/serviceWorker.js", {
+        scope: "/"
+      })
       .then(registration => console.info(`Service Worker Registered with scope: ${registration.scope}`))
       .catch(error => console.error("Error registering service worker", error));
-  });
-  window.addEventListener("online", () => {
-    navigator.serviceWorker.ready
-      .then(service => service.sync.register("Synchronize"))
-      .catch(error => console.error("Service worker not ready", error));
   });
 }
 

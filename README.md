@@ -53,6 +53,7 @@ reference : https://www.youtube.com/watch?v=tyVQW2PkFk4
 
 1. impleement the tab with tab-index (index, the resturant cab with tabindex 3)
 2. add the image-alt tag in the creatResturantHTML
+3. add aria-label="select cuisine" to the selection-filter in the index.html
 
 note :
 -- the reason why the resturant tile is fix width is because the width is fix "Restaurant Listing" which the width is set to "270px;"
@@ -72,8 +73,14 @@ note :
 
 [2019.01.12] - service-workers
 
-1. add aria-label="select cuisine" to the selection-filter in the index.html
 2. watching video : Intro To Service Workers & Caching
+
+reference : https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
+reference : https://www.youtube.com/watch?v=ksXwaWHCW6k
+
+[2019.01.13] - service-workers
+
+1.Testing in local and it seems ok
 
 reference : https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
 reference : https://www.youtube.com/watch?v=ksXwaWHCW6k
@@ -87,6 +94,10 @@ service-worker failed to registration => "The script has an unsupported MIME typ
 solution : update the server.py and add the new mimetype : '.js': 'application/javascript'
 
 Reference : https://knowledge.udacity.com/questions/6687
+
+Problem 2 :
+
+cannot cache the static file : resturant.ico file (debugging show it is in the cache but cannot surved in the offline scenario)
 
 ## TODO
 

@@ -1,6 +1,7 @@
 const staticCache = "restaurant-static-v1";
 const staticAssets = [
     '/',
+    '/img/restaurant.ico',
     '/img/1.jpg',
     '/img/2.jpg',
     '/img/3.jpg',
@@ -11,11 +12,10 @@ const staticAssets = [
     '/img/8.jpg',
     '/img/9.jpg',
     '/img/10.jpg',
-    '/img/restaurant.ico',
     '/index.html',
     '/restaurant.html',
     '/css/styles-index.css',
-    '/css/styles-index.css',
+    '/css/styles-restaurant.css',
     '/js/dbhelper.js',
     '/js/main.js',
     '/js/restaurant_info.js',
@@ -62,11 +62,14 @@ self.addEventListener("activate", event => {
 /**
  * Call fetch event
  */
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', function (event) {
     console.log('Service Worker : Fetch');
-    event.respondWith(fetch(event.request).catch(() => caches.match(event.request)))
+    event.respondWith(
+        fetch(event.request).catch(function () {
+            return caches.match(event.request);
+        })
+    );
 });
-
 
 // const port = event.request.url.split("/")[2].split(":")[1];
 
