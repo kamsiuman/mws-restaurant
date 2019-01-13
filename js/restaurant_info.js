@@ -2,6 +2,23 @@ let restaurant;
 var map;
 
 /**
+ * Register the service worker.
+ */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then(registration => console.info(`Service Worker Registered with scope: ${registration.scope}`))
+      .catch(error => console.error("Error registering service worker", error));
+  });
+  window.addEventListener("online", () => {
+    navigator.serviceWorker.ready
+      .then(service => service.sync.register("Synchronize"))
+      .catch(error => console.error("Service worker not ready", error));
+  });
+}
+
+/**
  * Initialize Google map, called from HTML.
  */
 window.initMap = () => {

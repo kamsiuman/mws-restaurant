@@ -5,6 +5,22 @@ var map
 var markers = []
 
 /**
+ * Register the service worker.
+ */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    console.log('Service Worker : Registered');
+    navigator.serviceWorker
+      .register("/serviceWorker.js", {
+        scope: "/"
+      })
+      .then(registration => console.info(`Service Worker Registered with scope: ${registration.scope}`))
+      .catch(error => console.error("Error registering service worker", error));
+  });
+}
+
+
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -159,7 +175,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.tabIndex = '3';
-  more.onclick = function() {
+  more.onclick = function () {
     window.location = DBHelper.urlForRestaurant(restaurant);
   }
   li.append(more)

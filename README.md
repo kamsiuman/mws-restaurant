@@ -14,7 +14,9 @@
 ## Instructions
 
 1. git clone repo-> https://github.com/kamsiuman/mws-restaurant-stage-1-google-maps.git
-2. In a terminal, spin up the server with `python -m SimpleHTTPServer 8000` or `python -m http.server 8001`
+2. In a terminal, spin up the server with `python -m SimpleHTTPServer 8000` or `python -m http.server 8000`
+   IMPORTMANT : if you see the server-worker error : plesae update the server.py and add the new mimetype : '.js': 'application/javascript' .. for details. please reference the known-issue below
+
 3. browser the index.html
 
 ## Development Journal/Thought
@@ -68,10 +70,23 @@ note :
 2. fix the naming convention.
 3. more to come!
 
-[2019.01.12] - accessability
+[2019.01.12] - service-workers
 
 1. add aria-label="select cuisine" to the selection-filter in the index.html
-1. fix the @media query by adding the meta tag in the html
+2. watching video : Intro To Service Workers & Caching
+
+reference : https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
+reference : https://www.youtube.com/watch?v=ksXwaWHCW6k
+
+## known-issue
+
+Problem 1 :
+service-worker failed to registration => "The script has an unsupported MIME type ('text/plain').Failed to load resource: net::ERR_INSECURE_RESPONSEmain.js:18 Service Worker Not registeredDOMException: Failed to register a ServiceWorker: The script has an unsupported MIME type ('text/plain')."
+. able to register the srevice work as I am facing the error
+
+solution : update the server.py and add the new mimetype : '.js': 'application/javascript'
+
+Reference : https://knowledge.udacity.com/questions/6687
 
 ## TODO
 
