@@ -101,6 +101,18 @@ cannot cache the static file : resturant.ico file (debugging show it is in the c
 2. fix the naming convention.
 3. more to come!
 
+## History
+
+[2019.01.13] - update according to the code-review
+
+1.  restaurant.html : specify the ARIA role for the map element -> add the application-role in the map-container elememt
+
+    <section id="restaurant-container">
+      <h2 tabindex="3" id="restaurant-name"></h2>
+
+2.  main.js
+    (line 162) change the tag from h1 to h2
+
 ## References
 
 1. https://www.diigo.com/outliner/fjslyn/Udacity-Restaurant-Reviews-App-(project-%235)?key=zqiopam1yz
